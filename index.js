@@ -17,7 +17,7 @@ app.use(express.json());
 app.use("/api/items", itemsRoute);
 
 // BACKEND RUNMIN IN POST 5000 HERE
-const port = "5000";
-app.listen(port, () => {
-  console.log(`Backend is running with port ${port}..`);
+
+app.listen(process.env.PORT || PORT, () => {
+  console.log(`Backend is running with port ${PORT}..`);
 });
